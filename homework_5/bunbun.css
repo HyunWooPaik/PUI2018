@@ -1,0 +1,375 @@
+body {
+    font-family: Roboto;
+    color: #4B5552;
+	background-color: #fff7f4;
+    width: 1200px;
+    margin:0 auto;
+}
+
+p {
+    text-align: center;
+    line-height: 40%
+}
+
+a {
+    font-family: Roboto;
+    color: #4B5552;
+    text-decoration: none;
+}
+
+#logo {
+	font-family: "Alex Brush";
+    font-size: 1.5em;
+    color: #4B5552;
+}
+
+.topnav{
+    overflow: hidden;
+    width: 1100px;
+    padding: 10px 50px 0 50px;
+}
+
+.topnav a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navright {
+    float: right;
+    padding: 4px;
+}
+#acicon{
+    transform: translateY(-4px);
+    -webkit-transform:translateY(-4px);
+}
+
+.botnav {
+    position: absolute;
+    top: 750px;
+    overflow: hidden;
+    width: 1100px;
+    padding: 0 50px;
+}
+
+.botnav a {
+  float: left;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+#leftimg {
+    transform: translateY(2px);
+    -webkit-transform:translateY(2px);
+}
+#rightimg {
+    transform: translateY(2px);
+    -webkit-transform:translateY(2px);
+}
+
+.hpm {
+    width: 1200px;
+    position: relative;
+    padding: 10px 0 10px 0;
+    
+}
+
+#mainimg {
+    width: 1200px;
+    height: 582px;
+    overflow: hidden;
+    position: relative;
+    margin: 10px 0 30px 0;
+}
+
+#mainimg img {
+/*    height: auto;*/
+    width: 1100px;
+    position: relative;
+    top: -20%;
+    margin: 50px;
+}
+
+#mainimg #btn {
+  position: absolute;
+  top: 90%;
+  left: 80%;
+  background-color: white;
+  color: #4B5552;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+}
+
+#grad {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1100px;
+    height: 160px;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.4));
+    margin: 0 50px;
+    
+}
+
+.hpm #btnl {
+  position: absolute;
+  top: 85%;
+  left: 3%;
+  background-color: #FFDDD0;
+  width: 70px;
+  height: 70px;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+.hpm #btnr {
+  position: absolute;
+  top: 85%;
+  left: 8.8%;
+  background-color: #FFDDD0;
+  width: 70px;
+  height: 70px;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+
+
+.hpm #btnl a{
+    color: white;
+}
+.hpm #btnr a{
+    color: white;
+}
+
+
+.menu {
+    width: 1100px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+.rolls {
+    overflow: hidden;
+    width: 26%;
+    height: 330px;
+    float: left;
+    margin: 15px 3.66% 0 3.66%;
+    object-fit: cover;
+}
+
+#original img{
+    object-fit: cover;
+    height: 240px;
+    width: 120%;
+    object-position: -30px -60px;
+}
+
+#blackberry img{
+    object-fit: cover;
+    height: 240px;
+    width: 180%;
+    object-position: -80px -70px;
+}
+
+#walnut img{
+    object-fit: cover;
+    height: 240px;
+    width: 130%;
+    object-position: -30px -0px;
+}
+
+#originalgf img{
+    object-fit: cover;
+    height: 240px;
+    width: 110%;
+    object-position: -20px -90px;
+}
+
+#pumpkin img{
+    object-fit: cover;
+    height: 240px;
+    width: 110%;
+    object-position: -0px -50px;
+}
+
+#caramel img{
+    object-fit: cover;
+    height: 240px;
+    width: 170%;
+    object-position: -70px -20px;
+}
+
+
+
+.detailpg {
+    width: 100%;
+    height: 650px;
+    background-color: white;
+}
+
+.cleft {
+    width: 432px;
+    padding: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.cright {
+    padding: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.detpic {
+    object-fit: cover;
+    width: 432px;
+    height: 365px;   
+}
+
+.cleft #btnl {
+/*
+  position: absolute;
+  top: 85%;
+  left: 8.8%;
+*/
+  background-color: #FFDDD0;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+.cleft #btnr {
+/*
+  position: absolute;
+  top: 85%;
+  left: 8.8%;
+*/
+  background-color: #FFDDD0;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+#btnl a{
+    color: white;
+}
+#btnr a{
+    color: white;
+}
+.picarrow {
+    position: relative;
+}
+#leftright #btnl{
+    position: absolute;
+    bottom: 1%;
+    right: 9.2%;
+}
+#leftright #btnr{
+    position: absolute;
+    bottom: 1%;
+    right: 0%;
+}
+
+.pdetail {
+    padding: 10px 0 0 0;
+    font-size: 14px;
+}
+
+#pname {
+    font-size: 20px;
+    margin: 0 0 3px 0;
+}
+
+#nutfact {
+    font-size: 20px;
+    margin: 30px 0 3px 0;
+}
+
+td {
+    padding: 0 30px 5px 0;
+}
+
+.cright p {
+    text-align: left;
+}
+
+.option {
+    height: 365px;
+    border-bottom: 1px solid #4B5552;
+    
+}
+
+.qntcon {
+    padding: 55px 0;
+}
+
+.quantity p{
+    font-size: 20px;
+}
+.glazing p{
+    font-size: 20px;
+}
+
+.qntnum {
+    display: inline-block;
+    padding: 0 25px;
+    margin: 0 10px 0 0;
+    border: 1px solid #4B5552;
+}
+.glzsel {
+    display: inline-table;
+    padding: 0 25px;
+    margin: 0 10px 0 0;
+    border: 1px solid #4B5552;
+}
+
+.final p{
+    font-size: 25px;
+    text-align: right;
+}
+
+.cart {
+    background-color: #FFB6B6;
+    width: 120px;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+    border: none;
+}
+.purchase {
+    background-color: #FFA482;
+    width: 120px;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+    border: none;
+}
+.buttons{
+    float: right;
+}
+
+#left2 {
+    transform: translateY(2px);
+    -webkit-transform:translateY(2px);
+}
+#right2 {
+    transform: translateY(2px);
+    -webkit-transform:translateY(2px);
+}
+
+
+
+
+
+
+
