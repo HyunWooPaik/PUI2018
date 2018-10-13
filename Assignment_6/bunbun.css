@@ -325,7 +325,14 @@ td {
     padding: 0 25px;
     margin: 0 10px 0 0;
     border: 1px solid #4B5552;
+    cursor: pointer;
 }
+
+.active {
+  background-color: #4B5552;
+  color: #ffffff;
+}
+
 .glzsel {
     display: inline-table;
     padding: 0 25px;
