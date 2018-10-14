@@ -62,7 +62,6 @@ function loadPage() {
 			glzsels[i].classList.remove("active");
 		}
 		glzsels[2].classList.add("active");
-		glzsels[1].classList.add("active");
 		calorie.textContent = "330";
 		sugar.textContent = "27g";
 		fat.textContent = "5g";
@@ -73,7 +72,6 @@ function loadPage() {
 			glzsels[i].classList.remove("active");
 		}
 		glzsels[3].classList.add("active");
-		glzsels[1].classList.add("active");
 		calorie.textContent = "420";
 		sugar.textContent = "36g";
 		fat.textContent = "7g";
