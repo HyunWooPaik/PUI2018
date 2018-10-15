@@ -10,10 +10,20 @@ class Animal {
 	}
 }
 
+function random(length) {
+	return Math.floor(Math.random() * length);
+}
+
+
 
 $(document).ready(()=>{
-	console.log("ready")
+	console.log("ready");
 
-	var animal = new Animal(picts[3], names[0], ages[2])
-	console.log(animal)
+	var animal = new Animal(picts[random(5)], names[random(5)], ages[random(5)]);
+	console.log(animal);
+	$("#animal-img").attr("src", animal.pic);
+	$("#animal-name").html(animal.name);
+	$("#animal-age").html(animal.age + " years old");
+
 })
+
