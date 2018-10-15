@@ -381,16 +381,18 @@ td {
     font-size: 30px;
     text-align: left;
     font-weight: 500;
-    padding: 30px 50px 30px 50px;
+    padding: 15px 50px 15px 50px;
 }
 
 #cartPage {
   padding: 0 50px;
   font-weight: normal;
+  position: relative;
+  height: 500px;
+  background-color: grey;
 }
 
 #table{
-
   width: 100%;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
@@ -400,8 +402,28 @@ th, td {
     padding: 5px;
 }
 
-
-
+#continue {
+    background-color: #4B5552;
+    width: 165px;
+    height: 40px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    position: absolute;
+    top: 76.5%;
+    left: 67%;
+}
+#checkout {
+    background-color: white;
+    width: 165px;
+    height: 40px;
+    color: #4B5552;
+    font-size: 15px;
+    border: 1px solid #4B5552;
+    position: absolute;
+    left: 80%;
+    top: 76.5%;
+}
 
 
 

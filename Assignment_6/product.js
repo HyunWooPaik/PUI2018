@@ -45,6 +45,9 @@ function loadPage() {
 			glzsels[i].classList.remove("active");
 		}
 		glzsels[0].classList.add("active");
+		calorie.textContent = "180";
+		sugar.textContent = "20g";
+		fat.textContent = "1g";
 	});
 
 	glzsels[1].addEventListener("click", function() {
