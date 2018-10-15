@@ -342,7 +342,7 @@ td {
 }
 
 .final p{
-    font-size: 25px;
+    font-size: 30px;
     text-align: right;
 }
 
@@ -375,6 +375,30 @@ td {
     -webkit-transform:translateY(2px);
 }
 
+
+
+#cartTitle {
+    font-size: 30px;
+    text-align: left;
+    font-weight: 500;
+    padding: 30px 50px 30px 50px;
+}
+
+#cartPage {
+  padding: 0 50px;
+  font-weight: normal;
+}
+
+#table{
+
+  width: 100%;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+th, td {
+    padding: 5px;
+}
 
 
 
