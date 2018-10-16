@@ -1,4 +1,4 @@
-
+var hasdata = false;
 
 
 
@@ -102,8 +102,8 @@ function productOption() {
 
 
 
-	let addcart = document.getElementByID("cartor");
-	let hasdata = false;
+	let addcart = document.getElementById("cartor");
+	
 
 	addcart.addEventListener("click", function(){
 		localStorage.setItem("image", "https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,q_auto,w_400/1669_mj02-cinnamonbun-article");
@@ -112,6 +112,7 @@ function productOption() {
 		localStorage.setItem("glazing", glazing);
 		localStorage.setItem("price", finalPrice.innerText);
 		hasdata = true;
+		localStorage.setItem("hasdata",hasdata);
 		console.log("saved");
 	})
 
@@ -119,7 +120,11 @@ function productOption() {
 }
 
 function loaddata(){
-	if (hasdata){
+	Json.parse(localStorage.getItem("hasdata"));
+	if (localStorage.hasdata){
+		console.log("load");
+		JSON.parse(localStorage.getItem("quantity"));
+		console.log(localStorage.quantity);
 		var table = document.getElementById("selecteditem");
 		var row = table.insertRow(-1);
 		var cell1 = row.inserCell(0);
@@ -138,8 +143,7 @@ function loaddata(){
 
 
 
-function loadPage() {
-	productOption();
-	loaddata();
 
-}
+productOption();
+loaddata();
+
