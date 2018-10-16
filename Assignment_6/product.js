@@ -120,7 +120,7 @@ function productOption() {
 }
 
 function loaddata(){
-	Json.parse(localStorage.getItem("hasdata"));
+	JSON.parse(localStorage.getItem("hasdata"));
 	if (localStorage.hasdata){
 		console.log("load");
 		JSON.parse(localStorage.getItem("quantity"));
