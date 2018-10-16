@@ -353,6 +353,7 @@ td {
     color: white;
     font-size: 18px;
     border: none;
+    cursor: pointer;
 }
 .purchase {
     background-color: #FFA482;
@@ -361,6 +362,7 @@ td {
     color: white;
     font-size: 18px;
     border: none;
+    cursor: pointer;
 }
 .buttons{
     float: right;
@@ -405,7 +407,7 @@ th, td {
   padding: 0 50px;
   overflow: auto;
   height: 470px;
-  background-color: grey;
+  /*background-color: grey;*/
 }
 
 #cartbtn {
