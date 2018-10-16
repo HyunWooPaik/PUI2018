@@ -388,8 +388,7 @@ td {
   padding: 0 50px;
   font-weight: normal;
   position: relative;
-  height: 500px;
-  background-color: grey;
+
 }
 
 #table{
@@ -402,6 +401,18 @@ th, td {
     padding: 5px;
 }
 
+#items{
+  padding: 0 50px;
+  overflow: auto;
+  height: 470px;
+  background-color: grey;
+}
+
+#cartbtn {
+  padding: 15px 50px 0 0;
+  float: right;
+}
+
 #continue {
     background-color: #4B5552;
     width: 165px;
@@ -409,9 +420,9 @@ th, td {
     color: white;
     font-size: 15px;
     border: none;
-    position: absolute;
-    top: 76.5%;
-    left: 67%;
+    /*position: absolute;*/
+    top: 670px;
+    left: 50%;
 }
 #checkout {
     background-color: white;
@@ -420,9 +431,9 @@ th, td {
     color: #4B5552;
     font-size: 15px;
     border: 1px solid #4B5552;
-    position: absolute;
-    left: 80%;
-    top: 76.5%;
+    /*position: absolute;*/
+    top: 670px;
+    left: 1035px;
 }
 
 

@@ -1,4 +1,6 @@
-function loadPage() {
+
+
+function productOption() {
 	let qntnums = document.getElementsByClassName("qntnum");
 	let finalPrice = document.getElementById("finalPrice");
 
@@ -79,8 +81,11 @@ function loadPage() {
 		sugar.textContent = "36g";
 		fat.textContent = "7g";
 	});
+}
 
 
 
+function loadPage() {
+	productOption();
 
 }
