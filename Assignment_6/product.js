@@ -103,17 +103,27 @@ function productOption() {
 
 
 	let addcart = document.getElementById("cartor");
+	let productname = document.getElementById("pname");
+	let pname = productname.innerText;
+	let imgsrc = document.getElementById("imgsrc").src;
 	
 
 	addcart.addEventListener("click", function(){
-		localStorage.setItem("image", "https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,q_auto,w_400/1669_mj02-cinnamonbun-article");
-		localStorage.setItem("name", "Original");
+		localStorage.setItem("image", imgsrc);
+		localStorage.setItem("name", pname);
 		localStorage.setItem("quantity", quantity);
 		localStorage.setItem("glazing", glazing);
 		localStorage.setItem("price", finalPrice.innerText);
 		hasdata = true;
 		localStorage.setItem("hasdata",hasdata);
 		console.log("saved");
+		console.log(pname);
+
+
+		let list = ["1", "2", "3"];
+		localStorage.setItem("list", list);
+
+
 	})
 
 
@@ -121,23 +131,43 @@ function productOption() {
 
 function loaddata(){
 	JSON.parse(localStorage.getItem("hasdata"));
+	// JSON.parse(localStorage.getItem("image"));
+	// JSON.parse(localStorage.getItem("name"));
+	// JSON.parse(localStorage.getItem("quantity"));
+	// JSON.parse(localStorage.getItem("glazing"));
+	// JSON.parse(localStorage.getItem("price"));
+
 	if (localStorage.hasdata){
 		console.log("load");
-		JSON.parse(localStorage.getItem("quantity"));
+		console.log(localStorage.list);
 		console.log(localStorage.quantity);
+		console.log(localStorage.glazing);
 		var table = document.getElementById("selecteditem");
 		var row = table.insertRow(-1);
-		var cell1 = row.inserCell(0);
-		var cell2 = row.inserCell(1);
-		var cell3 = row.inserCell(2);
-		var cell4 = row.inserCell(3);
-		var cell5 = row.inserCell(4);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		var cell5 = row.insertCell(4);
+		var cell6 = row.insertCell(5);
 
-		// cell1.innerHTML = 
-		// cell2.innerHTML = 
-		cell3.innerHTML = localStorage.getItem("price");
-		cell4.innerHTML = "1";
-		cell5.innerHTML = localStorage.getItem("price");
+
+		var myImage = new Image(150,150);
+		myImage.src = localStorage.getItem("image");
+
+
+		var btn = document.createElement("BUTTON");
+    	var t = document.createTextNode("Remove");
+    	btn.appendChild(t);
+    	var content = localStorage.getItem("name") + " / " + localStorage.getItem("quantity") + " pack / " + localStorage.getItem("glazing")
+
+
+		cell1.appendChild(myImage); 
+		cell2.innerHTML = content;
+		cell3.appendChild(btn);
+		cell4.innerHTML = localStorage.getItem("price");
+		cell5.innerHTML = "1";
+		cell6.innerHTML = localStorage.getItem("price");
 	}
 }
 

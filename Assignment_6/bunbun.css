@@ -398,13 +398,17 @@ td {
   border-bottom: 1px solid black;
   border-top: 1px solid black;
 }
+#selecteditem{
+  width: 100%;
+  text-align: center;
+}
 
 th, td {
     padding: 5px;
 }
 
 #items{
-  padding: 0 50px;
+  /*margin: 0 50px;*/
   overflow: auto;
   height: 470px;
   /*background-color: grey;*/
@@ -437,6 +441,7 @@ th, td {
     top: 670px;
     left: 1035px;
 }
+
 
 
 
