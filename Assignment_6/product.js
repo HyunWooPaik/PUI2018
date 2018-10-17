@@ -138,37 +138,43 @@ function loaddata(){
 	// JSON.parse(localStorage.getItem("price"));
 
 	if (localStorage.hasdata){
-		console.log("load");
-		console.log(localStorage.list);
-		console.log(localStorage.quantity);
-		console.log(localStorage.glazing);
-		var table = document.getElementById("selecteditem");
-		var row = table.insertRow(-1);
-		var cell1 = row.insertCell(0);
-		var cell2 = row.insertCell(1);
-		var cell3 = row.insertCell(2);
-		var cell4 = row.insertCell(3);
-		var cell5 = row.insertCell(4);
-		var cell6 = row.insertCell(5);
+			console.log("load");
+			console.log(localStorage.list);
+			console.log(localStorage.quantity);
+			console.log(localStorage.glazing);
+			var table = document.getElementById("selecteditem");
+			var row = table.insertRow(-1);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			var cell4 = row.insertCell(3);
+			var cell5 = row.insertCell(4);
+			var cell6 = row.insertCell(5);
 
 
-		var myImage = new Image(150,150);
-		myImage.src = localStorage.getItem("image");
+			var myImage = new Image(150,150);
+			myImage.src = localStorage.getItem("image");
 
 
-		var btn = document.createElement("BUTTON");
-    	var t = document.createTextNode("Remove");
-    	btn.appendChild(t);
-    	var content = localStorage.getItem("name") + " / " + localStorage.getItem("quantity") + " pack / " + localStorage.getItem("glazing")
+			var btn = document.createElement("BUTTON");
+	    	var t = document.createTextNode("Remove");
+	    	btn.appendChild(t);
+	    	var content = localStorage.getItem("name") + " / " + localStorage.getItem("quantity") + " pack / " + localStorage.getItem("glazing")
 
 
-		cell1.appendChild(myImage); 
-		cell2.innerHTML = content;
-		cell3.appendChild(btn);
-		cell4.innerHTML = localStorage.getItem("price");
-		cell5.innerHTML = "1";
-		cell6.innerHTML = localStorage.getItem("price");
+			cell1.appendChild(myImage); 
+			cell2.innerHTML = content;
+			cell3.appendChild(btn);
+			cell4.innerHTML = localStorage.getItem("price");
+			cell5.innerHTML = "1";
+			cell6.innerHTML = localStorage.getItem("price");
+
 	}
+
+	btn.addEventListener("click", function(){
+			var i = this.parentNode.parentNode.rowIndex;
+			document.getElementById("selecteditem").deleteRow(i);
+	})
 }
 
 
