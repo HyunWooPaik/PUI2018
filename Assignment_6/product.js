@@ -127,14 +127,12 @@ function productOption() {
 		}
 
 		localStorage.setItem("data", JSON.stringify(items));
-
-
-
 		console.log("saved");
 
+		readCart();
+
+
 	});
-
-
 }
 
 function loaddata(){
@@ -173,14 +171,27 @@ function loaddata(){
 			cartItems.splice(i-1,1);
 			console.log(cartItems);
 			localStorage.setItem("data", JSON.stringify(cartItems));
-
+			readCart();
 		});
+	}
+}
 
 
+
+function readCart(){
+	var itemsInCart = JSON.parse(localStorage.getItem("data"));
+	var numberItem = document.getElementById("cartVolume");
+	if (itemsInCart == null){
+		var itemsInCart = [];
+		console.log(itemsInCart);
+	} else if (itemsInCart.length === 0){
+		numberItem.textContent = "Cart";
+	} else {
+		numberItem.textContent = "Cart" + "(" + itemsInCart.length + ")";
 	}
 
 
-	
 }
+
 
 

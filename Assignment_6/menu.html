@@ -3,6 +3,7 @@
 <head>
 	<title>bunbun menu</title>
 	<link rel="stylesheet" type="text/css" href="bunbun.css">
+	<script src="product.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Alex+Brush|Roboto:400,500,700" rel="stylesheet">
 
 </head>
@@ -11,7 +12,7 @@
 		<a id="logo" href="homepage.html">Bun Bun Bake Shop</a>
         <div class="navright">
             <a  href="menu.html">Menu</a> 
-            <a  href="cart.html">Cart</a>
+            <a  href="cart.html" id="cartVolume">Cart</a>
             <a><img src="account_icon.svg" id="acicon"></a>
         </div>
     </div >
@@ -71,6 +72,8 @@
         <a>Contact Us</a>
         <a>Shipping & Returns</a>
     </div>
+
+    <script>readCart();</script>
 <!--    used w3school.com and stackoverflow for references    -->
 </body>
 </html>
