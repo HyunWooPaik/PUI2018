@@ -1,10 +1,3 @@
-var hasdata = false;
-
-
-
-
-
-
 
 function productOption() {
 	let qntnums = document.getElementsByClassName("qntnum");
@@ -106,80 +99,88 @@ function productOption() {
 	let productname = document.getElementById("pname");
 	let pname = productname.innerText;
 	let imgsrc = document.getElementById("imgsrc").src;
+
 	
+	var items = JSON.parse(localStorage.getItem("data"));
+	if (items == null){
+		var items = [];
+		console.log(items);
+	}
 
 	addcart.addEventListener("click", function(){
-		localStorage.setItem("image", imgsrc);
-		localStorage.setItem("name", pname);
-		localStorage.setItem("quantity", quantity);
-		localStorage.setItem("glazing", glazing);
-		localStorage.setItem("price", finalPrice.innerText);
-		hasdata = true;
-		localStorage.setItem("hasdata",hasdata);
+		console.log(items.length);
+		if (items.length > 0) {
+			// var items = JSON.parse(localStorage.getItem("data"));
+
+			newItem = { itemName: pname + " / " + quantity + " / " + glazing,
+						image: imgsrc,
+						price: finalPrice.innerText };
+			items.push(newItem);
+
+		}
+		else {
+			newItem = { itemName: pname + " / " + quantity + " / " + glazing,
+						image: imgsrc,
+						price: finalPrice.innerText };
+			items.push(newItem);
+
+		}
+
+		localStorage.setItem("data", JSON.stringify(items));
+
+
+
 		console.log("saved");
-		console.log(pname);
 
-
-		let list = ["1", "2", "3"];
-		localStorage.setItem("list", list);
-
-
-	})
+	});
 
 
 }
 
 function loaddata(){
-	JSON.parse(localStorage.getItem("hasdata"));
-	// JSON.parse(localStorage.getItem("image"));
-	// JSON.parse(localStorage.getItem("name"));
-	// JSON.parse(localStorage.getItem("quantity"));
-	// JSON.parse(localStorage.getItem("glazing"));
-	// JSON.parse(localStorage.getItem("price"));
-
-	if (localStorage.hasdata){
-			console.log("load");
-			console.log(localStorage.list);
-			console.log(localStorage.quantity);
-			console.log(localStorage.glazing);
-			var table = document.getElementById("selecteditem");
-			var row = table.insertRow(-1);
-			var cell1 = row.insertCell(0);
-			var cell2 = row.insertCell(1);
-			var cell3 = row.insertCell(2);
-			var cell4 = row.insertCell(3);
-			var cell5 = row.insertCell(4);
-			var cell6 = row.insertCell(5);
+	var cartItems = JSON.parse(localStorage.getItem("data"));
 
 
-			var myImage = new Image(150,150);
-			myImage.src = localStorage.getItem("image");
+	for (var i = 0; i < cartItems.length; i++) {
+		var table = document.getElementById("selecteditem");
+		var row = table.insertRow(-1);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		var cell5 = row.insertCell(4);
+		var cell6 = row.insertCell(5);		
 
+		var myImage = new Image(150,150);
+		myImage.src = cartItems[i].image;
 
-			var btn = document.createElement("BUTTON");
-	    	var t = document.createTextNode("Remove");
-	    	btn.appendChild(t);
-	    	var content = localStorage.getItem("name") + " / " + localStorage.getItem("quantity") + " pack / " + localStorage.getItem("glazing")
+		var btn = document.createElement("BUTTON");
+	    var t = document.createTextNode("Remove");
+	    btn.appendChild(t);
+	    var content = cartItems[i].itemName;
 
+	    cell1.appendChild(myImage); 
+		cell2.innerHTML = content;
+		cell3.appendChild(btn);
+		cell4.innerHTML = cartItems[i].price;
+		cell5.innerHTML = "1";
+		cell6.innerHTML = cartItems[i].price;;
 
-			cell1.appendChild(myImage); 
-			cell2.innerHTML = content;
-			cell3.appendChild(btn);
-			cell4.innerHTML = localStorage.getItem("price");
-			cell5.innerHTML = "1";
-			cell6.innerHTML = localStorage.getItem("price");
+		btn.addEventListener("click", function(){
+			var i = this.parentNode.parentNode.rowIndex;
+			document.getElementById("selecteditem").deleteRow(i);
+
+			cartItems.splice(i-1,1);
+			console.log(cartItems);
+			localStorage.setItem("data", JSON.stringify(cartItems));
+
+		});
+
 
 	}
 
-	btn.addEventListener("click", function(){
-			var i = this.parentNode.parentNode.rowIndex;
-			document.getElementById("selecteditem").deleteRow(i);
-	})
+
+	
 }
 
-
-
-
-productOption();
-loaddata();
 
