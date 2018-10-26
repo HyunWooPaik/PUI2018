@@ -1,11 +1,11 @@
-
+// Function to save the option selefted inside the product detail page
 function productOption() {
 	let qntnums = document.getElementsByClassName("qntnum");
 	let quantity = null;
 	let glazing = null;
 	let finalPrice = document.getElementById("finalPrice");
 
-
+// choosing the quantity option
 	qntnums[0].addEventListener("click", function() {
 		for (let i = 0; i < 4; i++) {
 			qntnums[i].classList.remove("active");
@@ -48,6 +48,8 @@ function productOption() {
 	let sugar = document.getElementById("sugar");
 	let fat = document.getElementById("fat");
 
+
+// choosing the glazing option
 	glzsels[0].addEventListener("click", function() {
 		for (let i = 0; i < 4; i++) {
 			glzsels[i].classList.remove("active");
@@ -100,7 +102,8 @@ function productOption() {
 	let pname = productname.innerText;
 	let imgsrc = document.getElementById("imgsrc").src;
 
-	
+
+// Calling for existing cookie. If nothing, create an array to save a new cookie
 	var items = JSON.parse(localStorage.getItem("data"));
 	if (items == null){
 		var items = [];
