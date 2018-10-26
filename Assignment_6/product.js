@@ -138,9 +138,12 @@ function productOption() {
 	});
 }
 
+
+// Calling the saved cookie inside the cart page
 function loaddata(){
 	var cartItems = JSON.parse(localStorage.getItem("data"));
 
+// help from https://www.w3schools.com/jsref/met_table_insertrow.asp
 
 	for (var i = 0; i < cartItems.length; i++) {
 		var table = document.getElementById("selecteditem");
@@ -155,17 +158,22 @@ function loaddata(){
 		var myImage = new Image(150,150);
 		myImage.src = cartItems[i].image;
 
+// adding a remove button, help from https://www.w3schools.com/jsref/met_document_createelement.asp
+
 		var btn = document.createElement("BUTTON");
 	    var t = document.createTextNode("Remove");
 	    btn.appendChild(t);
 	    var content = cartItems[i].itemName;
 
+// Assign each new cell correlated information
 	    cell1.appendChild(myImage); 
 		cell2.innerHTML = content;
 		cell3.appendChild(btn);
 		cell4.innerHTML = cartItems[i].price;
 		cell5.innerHTML = "1";
 		cell6.innerHTML = cartItems[i].price;;
+
+// deleting a row from a table, help from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_table_insert_deleterow
 
 		btn.addEventListener("click", function(){
 			var i = this.parentNode.parentNode.rowIndex;
@@ -180,7 +188,7 @@ function loaddata(){
 }
 
 
-
+// For each page, read if there's any item in the cart and show in the menu
 function readCart(){
 	var itemsInCart = JSON.parse(localStorage.getItem("data"));
 	var numberItem = document.getElementById("cartVolume");
