@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="Assets/tempis.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+
+
+	<title>Tempis</title>
+
+	
+	
+
+
+</head>
+<body>
+	<!-- navbar -->
+	
+	<nav id="mainNavbar" class="navbar fixed-top navbar-light navbar-expand-md py-3 " style="background-color: #FFFFFF;">
+		<div class="container"> 
+	    	<a href="../Main Page/index.html" class="navbar-brand">HYUN WOO PAIK</a>
+	      	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+	        	<span class="navbar-toggler-icon"></span>
+	      	</button>
+	      	<div class="collapse navbar-collapse justify-content-end" id="navLinks">
+	        	<ul class="navbar-nav ">
+		          	<li class="nav-item">
+		            	<a href="../Main Page/index.html" class="nav-link">Work</a>
+		          	</li>
+		          	<li class="nav-item">
+		            	<a href="../About/about.html" class="nav-link">About</a>
+		          	</li>
+		          	<li class="nav-item">
+		            	<a href="https://drive.google.com/file/d/1Z6iz3GlpEHyRMI9IDVaFkZLTt2pFMUx_/view?usp=sharing" target="_blank" class="nav-link">Resume</a>
+		          	</li>
+	        	</ul>
+	        </div>
+      	</div>
+    </nav>
+	
+
+    <div id=placeholder>
+    	
+    </div>
+
+
+    <div class="headerImg">
+    	<img id="topImg" data-aos="fade-up" src="Assets/imgs/tempis.jpg">
+    </div>
+
+    <section class="container">
+    	<div class="row topSection">
+    		<div class="col-md-8">
+    			<h1 id="proj-title">Tempis</h1>
+    			<h3 id="statement">“Tactile Weather Device making people TOUCH and FEEL the weather, offering them better understanding of outside atmosphere”</h3>
+    		</div>
+    		<div class="col-md-4">
+    			<p id="ptype">Individual Graduation Thesis</p> 
+    			<p id="tools">Tools</p> 
+    			<p class="right_list">Adobe CC</p> 
+    			<p class="right_list">Arduino</p> 
+    			<p class="right_list">Processing</p> 
+    			<p class="right_list">Fusion 360</p> 
+    			<p class="right_list">Keyshot</p> 
+    			<!-- <p>Awards</p>
+    			<p class="right_list">Graduation Show 3rd Place </p>
+    			<p class="right_list">2016 Audi Design Award - Best Creativity</p> -->
+    		</div>
+    	</div>
+    	<div  class="newSection">
+    		<h3 >Overview</h3>
+    		<p>Tempis simulates outside weather with heated or cooled air, wind power, and moisture. Users now know exactly how it feels outside before stepping outside the door and get properly dressed. Tempis could simulate weather of any location user wants. User can indirectly feel the weather his/her family and friends live in. Tempis gives users tactile feedback, not number, offering better understanding of current weather.</p>
+    	</div>
+    	<div  class="newSection">
+    		<h3 >Problem</h3>
+    		<p>We normally check numericalized weather before going outside with smartphone or TV. But often the weather is different from expected and gives unpleasant experience. How can we improve this so that we are better aware of outside temperature before actually going outside?</p>
+    	</div>
+    	<div  class="newSection">
+    		<h3 >Core Concept</h3>
+    		<img src="Assets/imgs/system.png" class="prjimgs" data-aos="fade-up">
+    		<p>How do we 'feel' the weather? The best way is to actually go outside but most of us wouldn't open the front door just to check the weather. We open the window and stick our hands out to feel the wind, the atmosphere, to know the weather. I incorporated that natural behavior into the design, except opening the window.
+
+			Weather information is collected and analyzed by the weather stations and transfered to user's digital devices. Tempis is connected to the smartphone application and receives weather data. It generates wind based on wind speed, humidity, and temperature to simulate outside atmosphere. Color coded lighting offers visual feedback of general temperature.</p>
+
+			<img src="Assets/imgs/detail.jpg" class="prjimgs" data-aos="fade-up">	
+    	</div>
+    	<div class="newSection">
+    		<h3 >Concept Video</h3>
+    		<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BQxQBG0rflM" allowfullscreen ></iframe>
+			</div>
+    	</div>
+    	<div class="newSection">
+    		<h3 >Final Prototype</h3>
+    		<img src="Assets/imgs/proto.jpg" class="prjimgs" data-aos="fade-up">
+    		<p>I installed stronger peltier as well as bigger heatsink. Stronger peltier and motor shield required heavy electric current, which created lots of heat and I had to put small heatsinks for the motor shield. When I tested my prototype with my colleagues, they usually stretched out their hands pretty close to the top of the aesthetic model. I replaced the distance sensor with IR sensor for it detects shorter distance much better.
+
+			The circular hole on the left side is for the air to blow up through hollow aesthetic model with LED strips. IR sensor would be attached to the top of the aesthetic model so that it detects the hand gesture and start generating wind.</p>
+			<img src="Assets/imgs/final.jpg" class="prjimgs" data-aos="fade-up">
+    	</div>
+    	<div class="newSection">
+    		<h3 >Reflection</h3>
+    		<p>This project is one of my favorite projects. I was very happy with the prototype and fortunate to receive prizes from department and Audi. But because I changed my topic with short amount of time left until the final presentation, I had to rush some of the process. I wanted the connection between the smartphone and the prototype to be wireless and had to spend a lot of time on figuring out how to do so. I only succeeded in connecting them through my computer. I would like to develop the connection so that the two devices communicate directly. 
+
+			I conducted a small test with confirmed concept design to optimize the design features. After building a working prototype, I invited fellow colleagues to try it out. I found out that people generally felt the prototype warmer than actual temperature and was able to generate more realistic tactile feeling. I changed the setting of a digital thermometer to match what people actually felt like. I learned both the importance and strength of understanding and communicating with users for a product to have meaningful impact to society, and the fact that this process should never stop.</p>
+    	</div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="footerr">
+		<p class="footerrr">Hyun Woo Paik © 2018</p>
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="Assets/tempis.js"></script>
+
+
+</body>
+</html>

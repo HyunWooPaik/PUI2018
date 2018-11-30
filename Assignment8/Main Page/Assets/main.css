@@ -1,0 +1,307 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700);
+
+
+
+
+
+/* Mouse hover 3d */
+/* From https://codepen.io/ariona/pen/JopOOr */
+
+.mouseHover {
+  /*background: #edf2f4;*/
+  perspective: 1000px;
+
+  transform-style: preserve-3d;
+  display: flex;
+  height: 60vh;
+  font-family: "Playfair Display",georgia,serif;
+}
+
+.card {
+  pointer-events: none;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  padding: 30px;
+  background: white;
+  border-radius: 5px;
+  width: 450px;
+  height: 250px;
+  margin: auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.card:after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  border-radius: 50%;
+  left: 0;
+  bottom: -10px;
+  box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);
+}
+.card .card-content {
+  margin: auto;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.card h1 {
+  -webkit-transform: translateZ(70px);
+          transform: translateZ(70px);
+}
+.card h5 {
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px);
+  color: #13a89e;
+  display: block;
+}
+.card p.related {
+  -webkit-transform: translateZ(80px);
+          transform: translateZ(80px);
+  font-style: italic;
+}
+
+
+
+
+
+/* navbar */
+
+#mainNavbar {
+  font-size: 1.0rem;
+  font-weight: 100;
+}
+
+#mainNavbar .nav-link{
+  color: black;
+}
+
+#mainNavbar .nav-link:hover{
+  color: #ff5a5a;
+}
+
+#mainNavbar .navbar-brand{
+  letter-spacing: 2px;
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+#mainNavbar .navbar-brand:hover{
+  color: #ff5a5a;
+}
+
+.navbar.scrolled{
+  background-color: white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* Tile style project sections */
+.tiles {
+  font-size: 0;
+  padding-top:40%;
+  position:relative;
+}
+.tiles .tile {
+  width: 65%;
+  top:0;
+  margin: 10px;
+  text-align: left;
+  opacity: .99;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.tiles .tile2{
+  width:35%;
+  padding-bottom: 1%;
+  top:14%;
+  left:60%;
+  margin: 10px;
+  text-align: left;
+  opacity: .99;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.tiles .tile3 {
+  width: 65%;
+  right:0;
+  top:0;
+  margin: 10px;
+  text-align: left;
+  opacity: .99;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.tiles .tile4{
+  width:35%;
+  padding-bottom: 1%;
+  top:14%;
+  right:60%;
+  margin: 10px;
+  text-align: left;
+  opacity: .99;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.tiles .tile img, .tiles .tile3 img, .tiles .tile2 .project, .tiles .tile4 .project {
+  display: block;
+  width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.tiles .tile:before {
+  content: '';
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  transition-property: top, opacity;
+  transition-duration: 0.3s;
+}
+.tiles .tile3:before {
+  content: '';
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  transition-property: top, opacity;
+  transition-duration: 0.3s;
+}
+
+
+
+p {
+  color: black;
+  font-size: 2rem;
+
+}
+
+.project{
+  background-color: white;
+  line-height: 1;
+}
+.projectTitle{
+  margin-top: 15px;
+}
+.projectType{
+  font-size: 1.1rem;
+
+}
+
+.projectDetail{
+  font-size: 1rem;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.7);
+}
+.caseStudy{
+  background-color: #ff5a5a;
+  color: white;
+  font-weight: 600;
+}
+
+
+/* Grow - hover.css */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.03);
+}
+
+
+/* footer */
+.footerr{
+  background-color: #ededed;
+  height: 100px;
+  text-align: center;
+  
+}
+.footerrr{
+  font-size: 1rem;
+  color: #666666;
+  padding-top: 43px;
+}
+
+/* Change orientation of the cards when screen is smaller */
+@media only screen and (max-width: 1000px) {
+  .tiles {
+    padding-top: 30px;
+  }
+
+  .tiles .tile {
+    width: 100%;
+    margin: 0;
+    position:relative;
+  }
+
+  .tiles .tile2 {
+    left: 0%;
+    width: 100%;
+    margin: 0;
+    position:relative;
+  }
+
+  .tiles .tile3 {
+    width: 100%;
+    margin: 0;
+    position:relative;
+  }
+  
+  .tiles .tile4 {
+    right: 0%;
+    width: 100%;
+    position:relative;
+    margin: 0;
+  }
+
+  .footerr {
+    margin-top: 30px;
+  }
+}
+
+
+
+
+
+
+
